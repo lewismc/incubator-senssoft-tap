@@ -78,7 +78,8 @@ class Main extends Component {
           <div className='ui container'>
             <div className='ui footer page teal inverted segment'>
               <div className='ui center aligned container'>
-                <div className='footer-text'>© Copyright 2016 The Charles Stark Draper Laboratory, Inc. All rights reserved.</div>
+                <div className='footer-text'>Copyright © 2010-2018 The Apache Software Foundation. All Rights Reserved.
+Apache SensSoft, Apache, the Apache feather logo, and the Apache SensSoft project logos are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
               </div>
             </div>
           </div>

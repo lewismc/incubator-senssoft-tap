@@ -53,8 +53,6 @@ gulp.task('dev', () => {
       'styles:build'
     ],
     [
-      // 'django',
-      // 'test',
       'styles',
       'js'
     ]
@@ -69,10 +67,5 @@ gulp.task('serve:backend', () => {
     stdio: 'inherit'
   });
 });
-
-// gulp.task('docker', () => {
-//   gulp.start('serve:backend');
-//   gulp.start('build');
-// });
 
 gulp.task('docker', ['build']);

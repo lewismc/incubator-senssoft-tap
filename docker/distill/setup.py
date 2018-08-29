@@ -72,11 +72,8 @@ setup (
     zip_safe = False,
     setup_requires = ['pytest-runner'],
     tests_require = ['pytest>=3.0.0', 'pytest-pylint', 'coverage'],
-    install_requires = ['Flask==0.10.1', 
-                        #'networkx==1.11',
+    install_requires = ['flask ~> 0.12.3', 
                         'elasticsearch-dsl==2.0.0', 
-                        #'numpy>=1.10.0', 
-                        #'scipy>=0.17.0',
                         'pandas>=0.18.1'
     ],
     entry_points = {

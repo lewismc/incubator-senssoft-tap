@@ -53,9 +53,6 @@ COPY logging.yml /usr/share/elasticsearch/config
 
 USER elasticsearch
 
-# Install Elastic-HQ
-RUN plugin install royrusso/elasticsearch-HQ/2.0.3
-
 CMD ["elasticsearch"]
 
 # Run on ports 9200 & 9300

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM python:2
+FROM python:2.7
 
 # install system wide deps
 RUN apt-get -yqq update

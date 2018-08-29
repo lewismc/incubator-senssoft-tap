@@ -14,26 +14,31 @@
 # limitations under the License.
 
 FROM python:3.4
-MAINTAINER Michelle Beard <msbeard@apache.org>
+MAINTAINER Apache SensSoft PMC <dev@senssoft.apache.org>
 
 # Install system wide dependencies
 RUN apt-get -yqq update && apt-get -yqq install \
+	apt-utils \
 	curl \
 	sudo
 
-# Install NodeJS 4.x
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+# Install NodeJS 8.x
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
+	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 RUN sudo -E apt-get -yqq install \
+	build-essential \
 	nodejs \
-	build-essential 
+	yarn
 
 # Set the work directory
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
 
 # Install gulp
-RUN npm install -g bower gulp
+RUN npm install -g yarn gulp
 
 # Install git
 RUN sudo -E apt-get -yqq install \

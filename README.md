@@ -56,6 +56,4 @@ Contributions are welcome!  Simply submit an issue report for problems you encou
 
 ## License
 
-Copyright 2016 The Charles Stark Draper Laboratory, Inc.
-
 TAP is released under the Apache v2.0 License.  See the LICENSE file for more information.  

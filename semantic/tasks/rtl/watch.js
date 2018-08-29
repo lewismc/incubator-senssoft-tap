@@ -8,6 +8,7 @@ var
   // node deps
   console      = require('better-console'),
   fs           = require('fs'),
+  replaceExt = require('replace-ext'),
 
   // gulp deps
   autoprefixer = require('gulp-autoprefixer'),
@@ -22,7 +23,6 @@ var
   replace      = require('gulp-replace'),
   rtlcss       = require('gulp-rtlcss'),
   uglify       = require('gulp-uglify'),
-  util         = require('gulp-util'),
   watch        = require('gulp-watch'),
 
   // user config
@@ -107,16 +107,16 @@ module.exports = function(callback) {
       else if(isPackagedTheme) {
         console.log('Change detected in packaged theme');
         lessPath = lessPath.replace(tasks.regExp.theme, source.definitions);
-        lessPath = util.replaceExtension(file.path, '.less');
+        lessPath = replaceExt.replaceExtension(file.path, '.less');
       }
       else if(isSiteTheme) {
         console.log('Change detected in site theme');
         lessPath = lessPath.replace(source.site, source.definitions);
-        lessPath = util.replaceExtension(file.path, '.less');
+        lessPath = replaceExt.replaceExtension(file.path, '.less');
       }
       else if(isDefinition) {
         console.log('Change detected in definition');
-        lessPath = util.replaceExtension(file.path, '.less');
+        lessPath = replaceExt.replaceExtension(file.path, '.less');
       }
 
       /*--------------
